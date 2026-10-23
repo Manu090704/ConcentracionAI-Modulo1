@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Evidencia_b2_ManuelBajos</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Evidencia1_b2_ManuelBajos</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -9855,8 +9855,8 @@ Empresas más grandes con activo fijo reportado = 0:
 Dep. Variable:                   apal   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.009
 Method:                 Least Squares   F-statistic:                     3.649
-Date:                Mon, 12 Oct 2026   Prob (F-statistic):            0.00582
-Time:                        23:18:10   Log-Likelihood:                 32.789
+Date:                Thu, 22 Oct 2026   Prob (F-statistic):            0.00582
+Time:                        10:11:49   Log-Likelihood:                 32.789
 No. Observations:                1129   AIC:                            -55.58
 Df Residuals:                    1124   BIC:                            -30.43
 Df Model:                           4                                         
@@ -10112,8 +10112,8 @@ lventas = lventas² = 0 (efecto total del tamaño):  F = 8.56,  gl = 2,  p = 2.0
 Dep. Variable:                   apal   R-squared:                       0.104
 Model:                            OLS   Adj. R-squared:                  0.090
 Method:                 Least Squares   F-statistic:                     4.780
-Date:                Mon, 12 Oct 2026   Prob (F-statistic):           5.89e-10
-Time:                        23:18:10   Log-Likelihood:                 87.310
+Date:                Thu, 22 Oct 2026   Prob (F-statistic):           5.89e-10
+Time:                        10:11:49   Log-Likelihood:                 87.310
 No. Observations:                1129   AIC:                            -138.6
 Df Residuals:                    1111   BIC:                            -48.10
 Df Model:                          17                                         
@@ -12146,8 +12146,8 @@ Media de ln(ventas) usada para centrar: 14.2545  (ventas ≈ 1,551 millones de U
 Dep. Variable:                   apal   R-squared:                       0.095
 Model:                            OLS   Adj. R-squared:                  0.081
 Method:                 Least Squares   F-statistic:                     5.544
-Date:                Mon, 12 Oct 2026   Prob (F-statistic):           3.89e-12
-Time:                        23:18:11   Log-Likelihood:                 246.15
+Date:                Thu, 22 Oct 2026   Prob (F-statistic):           3.89e-12
+Time:                        10:11:50   Log-Likelihood:                 246.15
 No. Observations:                1129   AIC:                            -456.3
 Df Residuals:                    1111   BIC:                            -365.8
 Df Model:                          17                                         
@@ -12230,8 +12230,8 @@ Method:                          IRLS   Df Model:                           17
 Norm:                   TukeyBiweight                                         
 Scale Est.:                       mad                                         
 Cov Type:                          H1                                         
-Date:                Mon, 12 Oct 2026                                         
-Time:                        23:18:11                                         
+Date:                Thu, 22 Oct 2026                                         
+Time:                        10:11:50                                         
 No. Iterations:                    24                                         
 ============================================================================================
                                coef    std err          z      P&gt;|z|      [0.025      0.975]
@@ -12817,8 +12817,8 @@ Empresas con peso cero en la regresión de Tukey: AFIB, ALUR, BRBR, BTAI, CCSI, 
 Dep. Variable:                   apal   R-squared:                       0.022
 Model:                            OLS   Adj. R-squared:                  0.019
 Method:                 Least Squares   F-statistic:                     6.390
-Date:                Mon, 12 Oct 2026   Prob (F-statistic):           4.39e-05
-Time:                        23:18:11   Log-Likelihood:                 202.40
+Date:                Thu, 22 Oct 2026   Prob (F-statistic):           4.39e-05
+Time:                        10:11:50   Log-Likelihood:                 202.40
 No. Observations:                1129   AIC:                            -394.8
 Df Residuals:                    1124   BIC:                            -369.7
 Df Model:                           4                                         
@@ -12917,6 +12917,7 @@ Desempeño DENTRO de muestra (unidades de Y: proporción deuda/activos; ×100 = 
 <p><strong>Un $R^2$ de 9.5% es bajo, y hay que decirlo sin rodeos:</strong> las características que incluí explican sólo una parte pequeña de por qué unas empresas usan más deuda que otras. Esto es coherente con la literatura —Frank y Goyal (2009) encuentran que, para el apalancamiento en libros, varios de los factores clásicos dejan de ser confiables— y con el ruido que la auditoría de la Parte 1 encontró en los datos de deuda de 2024. Un $R^2$ bajo no invalida los coeficientes (siguen siendo estimaciones válidas de asociaciones promedio), pero sí significa que <strong>el modelo sirve para entender tendencias, no para predecir con precisión el apalancamiento de una empresa concreta</strong>.</p>
 <h3 id="Fuera-de-muestra:-validaci%C3%B3n-cruzada-de-5-particiones">Fuera de muestra: validación cruzada de 5 particiones<a class="anchor-link" href="#Fuera-de-muestra:-validaci%C3%B3n-cruzada-de-5-particiones">¶</a></h3><p>Divido las 1,129 empresas al azar en 5 grupos; estimo el modelo con 4 y predigo el quinto, rotando. Así todas las empresas se predicen con un modelo que no las vio.</p>
 <p>Un detalle importante para no hacer trampa: <strong>los límites de winsorización se calculan sólo con las empresas de entrenamiento</strong> de cada partición y se aplican tanto a entrenamiento como a validación. Si los calculara con toda la muestra, la validación contendría información que el modelo no debería conocer.</p>
+<p><strong>Contra qué $Y$ se mide el error.</strong> La pregunta es <em>¿qué tan bien predigo el apalancamiento real?</em>, así que el error de validación se calcula contra la $Y$ <strong>original</strong> de las empresas de validación (sin winsorizar). Como referencia reporto también el error contra su $Y$ winsorizada, que es la versión que usaba antes y que resulta optimista porque recorta justo a las empresas más difíciles de predecir.</p>
 </div>
 </div>
 </div>
@@ -12930,14 +12931,19 @@ Desempeño DENTRO de muestra (unidades de Y: proporción deuda/activos; ×100 = 
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">validacion_cruzada</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">formula</span><span class="p">,</span> <span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""5-fold CV. Los límites de winsorización se calculan SÓLO con el fold de entrenamiento</span>
-<span class="sd">    y se aplican a entrenamiento y validación (sin fuga de información)."""</span>
+<span class="sd">    y se aplican a entrenamiento y validación (sin fuga de información).</span>
+<span class="sd">    El error se mide contra la Y ORIGINAL de las empresas de validación (la pregunta es qué tan bien</span>
+<span class="sd">    se predice el apalancamiento real) y, como referencia, contra su Y ya winsorizada."""</span>
     <span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">n_splits</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">SEMILLA</span><span class="p">)</span>
     <span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">tr</span><span class="p">,</span> <span class="n">te</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
         <span class="n">lims</span> <span class="o">=</span> <span class="n">limites_winsor</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">tr</span><span class="p">])</span>
         <span class="n">ent</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">winsorizar</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">tr</span><span class="p">],</span> <span class="n">lims</span><span class="p">),</span> <span class="n">winsorizar</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">te</span><span class="p">],</span> <span class="n">lims</span><span class="p">)</span>
-        <span class="n">error</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="n">Y</span><span class="p">]</span> <span class="o">-</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ent</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-        <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"RMSE"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">error</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span> <span class="s2">"MAE"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">error</span><span class="p">))})</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ent</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">err_orig</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">te</span><span class="p">][</span><span class="n">Y</span><span class="p">]</span> <span class="o">-</span> <span class="n">pred</span>            <span class="c1"># contra la Y original (sin winsorizar)</span>
+        <span class="n">err_win</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="n">Y</span><span class="p">]</span> <span class="o">-</span> <span class="n">pred</span>                     <span class="c1"># contra la Y winsorizada con límites de entrenamiento</span>
+        <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"RMSE (Y original)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">err_orig</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span> <span class="s2">"MAE (Y original)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">err_orig</span><span class="p">)),</span>
+                      <span class="s2">"RMSE (Y winsorizada)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">err_win</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span> <span class="s2">"MAE (Y winsorizada)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">err_win</span><span class="p">))})</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Validación cruzada de 5 particiones: RMSE y MAE promedio de validación"</span><span class="p">)</span>
@@ -12980,18 +12986,24 @@ Desempeño DENTRO de muestra (unidades de Y: proporción deuda/activos; ×100 = 
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>RMSE</th>
-<th>MAE</th>
+<th>RMSE (Y original)</th>
+<th>MAE (Y original)</th>
+<th>RMSE (Y winsorizada)</th>
+<th>MAE (Y winsorizada)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th>Modelo base (M1)</th>
+<td>0.2347</td>
+<td>0.1596</td>
 <td>0.2030</td>
 <td>0.1542</td>
 </tr>
 <tr>
 <th>Modelo final</th>
+<td>0.2289</td>
+<td>0.1552</td>
 <td>0.1981</td>
 <td>0.1498</td>
 </tr>
@@ -13011,9 +13023,10 @@ Desempeño DENTRO de muestra (unidades de Y: proporción deuda/activos; ×100 = 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>¿El modelo final predice mejor que el base empresas que no se usaron para estimarlo? Sí, pero la mejora es modesta.</strong></p>
 <ul>
-<li>El RMSE promedio de validación es <strong>0.198</strong> para el modelo final contra 0.203 del base, y el MAE 0.150 contra 0.154.</li>
-<li>La magnitud es pequeña: una reducción de 2.4% en el RMSE de validación. El modelo extendido es mejor, pero no transforma la capacidad de predicción.</li>
-<li><strong>No hay sobreajuste importante.</strong> El RMSE de validación del modelo final (0.198) es apenas mayor que su RMSE dentro de muestra (0.195), a pesar de sus 18 parámetros.</li>
+<li>Contra la <strong>$Y$ original</strong> (el apalancamiento real), el RMSE promedio de validación es <strong>0.229</strong> para el modelo final contra 0.235 del base, y el MAE 0.155 contra 0.160.</li>
+<li>La magnitud es pequeña: una reducción de 2.5% en el RMSE de validación. El modelo extendido es mejor, pero no transforma la capacidad de predicción.</li>
+<li><strong>El error real es mayor que el que daba la $Y$ winsorizada</strong> (RMSE 0.198 del modelo final, 0.203 del base): el error típico sube de unos 20 a unos 23 pp porque las empresas con apalancamiento extremo, que la winsorización recorta, son las más difíciles de predecir. Esta es la cifra que le corresponde al comité; la ordenación de los modelos no cambia.</li>
+<li><strong>No hay sobreajuste importante.</strong> Contra la misma $Y$ winsorizada, el RMSE de validación del modelo final (0.198) es apenas mayor que su RMSE dentro de muestra (0.195), a pesar de sus 18 parámetros.</li>
 </ul>
 <p>Las métricas están en las mismas unidades de $Y$ (proporción de deuda sobre activos), porque no transformé la variable dependiente.</p>
 <h2 id="6.2-Interpretaci%C3%B3n-de-los-coeficientes-del-modelo-final">6.2 Interpretación de los coeficientes del modelo final<a class="anchor-link" href="#6.2-Interpretaci%C3%B3n-de-los-coeficientes-del-modelo-final">¶</a></h2><p>El modelo final es</p>
@@ -13051,8 +13064,8 @@ E[apal] ={}&amp; \beta_0+\beta_1\,roa+\beta_2\,tang+\beta_3\,(lventas-14.25)+\be
 Dep. Variable:                   apal   R-squared:                       0.095
 Model:                            OLS   Adj. R-squared:                  0.081
 Method:                 Least Squares   F-statistic:                     5.544
-Date:                Mon, 12 Oct 2026   Prob (F-statistic):           3.89e-12
-Time:                        23:18:11   Log-Likelihood:                 246.15
+Date:                Thu, 22 Oct 2026   Prob (F-statistic):           3.89e-12
+Time:                        10:11:50   Log-Likelihood:                 246.15
 No. Observations:                1129   AIC:                            -456.3
 Df Residuals:                    1111   BIC:                            -365.8
 Df Model:                          17                                         
@@ -13493,6 +13506,27 @@ Rango de ln(ventas) en la muestra: 6.94 a 20.29
 <span class="n">beta_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">modelo_final</span><span class="o">.</span><span class="n">params</span> <span class="o">*</span> <span class="n">X_final</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">/</span> <span class="n">dw</span><span class="p">[</span><span class="n">Y</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">())</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"Intercept"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Coeficientes estandarizados (desviaciones estándar de Y por una desviación estándar de X):"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">beta_std</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">beta_std</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">"beta estandarizado"</span><span class="p">))</span>
+
+<span class="c1"># Aporte único al R² por BLOQUE: R² del modelo final menos R² del modelo sin ese bloque (misma muestra winsorizada)</span>
+<span class="n">BLOQUES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Rentabilidad (roa + roa:sp500)"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"roa"</span><span class="p">,</span> <span class="s2">"roa:sp500"</span><span class="p">],</span>
+    <span class="s2">"Tamaño (lventas_c + su cuadrado)"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"lventas_c"</span><span class="p">,</span> <span class="s2">"I(lventas_c ** 2)"</span><span class="p">],</span>
+    <span class="s2">"Sector (10 dummies)"</span><span class="p">:</span> <span class="n">SECTORES</span><span class="p">,</span>
+    <span class="s2">"S&amp;P 500 (sp500 + roa:sp500)"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"sp500"</span><span class="p">,</span> <span class="s2">"roa:sp500"</span><span class="p">],</span>
+    <span class="s2">"Valuación (lmb)"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"lmb"</span><span class="p">],</span>
+    <span class="s2">"Tangibilidad (tang)"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"tang"</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="n">r2_final</span> <span class="o">=</span> <span class="n">modelo_final_clasico</span><span class="o">.</span><span class="n">rsquared</span>
+<span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">quitar</span> <span class="ow">in</span> <span class="n">BLOQUES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">f_sin</span> <span class="o">=</span> <span class="s2">"apal ~ "</span> <span class="o">+</span> <span class="s2">" + "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">TERMINOS</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">quitar</span><span class="p">)</span>
+    <span class="n">sin</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">f_sin</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dw</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">F_b</span><span class="p">,</span> <span class="n">p_b</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">modelo_final_clasico</span><span class="o">.</span><span class="n">compare_f_test</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
+    <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"Bloque"</span><span class="p">:</span> <span class="n">nombre</span><span class="p">,</span> <span class="s2">"R² sin el bloque"</span><span class="p">:</span> <span class="n">sin</span><span class="o">.</span><span class="n">rsquared</span><span class="p">,</span>
+                  <span class="s2">"Aporte único al R²"</span><span class="p">:</span> <span class="n">r2_final</span> <span class="o">-</span> <span class="n">sin</span><span class="o">.</span><span class="n">rsquared</span><span class="p">,</span> <span class="s2">"p (prueba F del bloque)"</span><span class="p">:</span> <span class="n">p_b</span><span class="p">})</span>
+<span class="n">aporte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Bloque"</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"Aporte único al R²"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Aporte único al R² por bloque (R² del modelo final = </span><span class="si">{</span><span class="n">r2_final</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">):"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">aporte</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -13607,6 +13641,88 @@ Rango de ln(ventas) en la muestra: 6.94 a 20.29
 </div>
 </div>
 </div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Aporte único al R² por bloque (R² del modelo final = 0.0951):
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>R² sin el bloque</th>
+<th>Aporte único al R²</th>
+<th>p (prueba F del bloque)</th>
+</tr>
+<tr>
+<th>Bloque</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Sector (10 dummies)</th>
+<td>0.0481</td>
+<td>0.0471</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<th>Rentabilidad (roa + roa:sp500)</th>
+<td>0.0647</td>
+<td>0.0305</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<th>Tamaño (lventas_c + su cuadrado)</th>
+<td>0.0722</td>
+<td>0.0229</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<th>S&amp;P 500 (sp500 + roa:sp500)</th>
+<td>0.0755</td>
+<td>0.0196</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<th>Valuación (lmb)</th>
+<td>0.0887</td>
+<td>0.0064</td>
+<td>0.0050</td>
+</tr>
+<tr>
+<th>Tangibilidad (tang)</th>
+<td>0.0948</td>
+<td>0.0003</td>
+<td>0.5264</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -13617,7 +13733,16 @@ Rango de ln(ventas) en la muestra: 6.94 a 20.29
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Respuesta.</strong> Los términos con mayor coeficiente estandarizado son la interacción <code>roa:sp500</code> (0.21) y <code>roa</code> (−0.21), los dos de la <strong>rentabilidad</strong>. Le siguen el tamaño (0.16 el término lineal y −0.11 el cuadrático), la dummy de Alojamiento y alimentos (0.15), la de Información (0.09) y la valuación (−0.09). La tangibilidad queda al final (0.02).</p>
-<p>Concluyo que <strong>la rentabilidad, con su efecto diferenciado según la pertenencia al S&amp;P 500, es la variable con mayor poder explicativo</strong>, seguida del tamaño. Dos precauciones: ningún término domina (el mayor mueve $Y$ sólo 0.2 desviaciones estándar), y como el $R^2$ total es 9.5%, "mayor poder explicativo" es relativo.</p>
+<p><strong>Limitación de esta lectura.</strong> El coeficiente estandarizado de un término de interacción o de un cuadrado no se interpreta por separado: <code>roa</code> y <code>roa:sp500</code> forman una sola pregunta (el efecto de la rentabilidad), igual que <code>lventas_c</code> y su cuadrado (el efecto del tamaño), y la dummy <code>sp500</code> no se mueve sin <code>roa:sp500</code>. Por eso complemento con el <strong>aporte único al $R^2$ por bloque</strong>: lo que baja el $R^2$ al quitar el bloque completo del modelo final (9.5%).</p>
+<p><strong>Lectura del aporte único por bloques.</strong></p>
+<ul>
+<li><strong>Sector</strong> (10 dummies): 4.7 puntos de $R^2$, casi la mitad del total. Es el bloque con mayor aporte único, aunque lo logra con 10 parámetros.</li>
+<li><strong>Rentabilidad</strong> (<code>roa</code> y <code>roa:sp500</code>): 3.0 puntos. Es el <strong>concepto individual</strong> con mayor aporte: con sólo 2 términos explica casi lo mismo que los 10 de sector, y su efecto cambia de signo según el S&amp;P 500.</li>
+<li><strong>Tamaño</strong> (<code>lventas_c</code> y su cuadrado): 2.3 puntos.</li>
+<li><strong>S&amp;P 500</strong> (<code>sp500</code> y <code>roa:sp500</code>): 2.0 puntos; comparte la interacción con el bloque de rentabilidad, así que no se suman.</li>
+<li><strong>Valuación</strong> (<code>lmb</code>): 0.6 puntos. <strong>Tangibilidad</strong> (<code>tang</code>): 0.03 puntos y no significativa ($p=0.53$).</li>
+</ul>
+<p><strong>Conclusión.</strong> Con ambos criterios la <strong>rentabilidad</strong> (con su efecto diferenciado según el S&amp;P 500) es la variable con mayor poder explicativo entre las variables económicas del modelo, seguida del tamaño y de la valuación. Si se cuenta el sector completo como un solo bloque, éste lo supera en aporte total al $R^2$, pero reparte su efecto en 10 comparaciones contra el grupo base. Dos precauciones: ningún término domina (el mayor mueve $Y$ sólo 0.2 desviaciones estándar), y como el $R^2$ total es 9.5%, "mayor poder explicativo" es relativo.</p>
 <h2 id="6.4-Predicciones-para-tres-empresas">6.4 Predicciones para tres empresas<a class="anchor-link" href="#6.4-Predicciones-para-tres-empresas">¶</a></h2><p>Escojo tres empresas reales de la muestra, de sectores y tamaños distintos:</p>
 <table>
 <thead>
@@ -13861,19 +13986,16 @@ Rango de ln(ventas) en la muestra: 6.94 a 20.29
 <em>Robustez:</em> el efecto de la valuación es casi idéntico en todas las versiones. Las diferencias por sector se mantienen en signo, aunque la prima de Alojamiento y alimentos baja a 9 pp con el método más conservador.</p>
 <p><strong>Lo que no encontré.</strong> La tangibilidad (activo fijo sobre activos) tiene el signo positivo que predice la teoría, pero su efecto no se distingue de cero en ninguna versión del modelo.</p>
 <h3 id="Limitaciones">Limitaciones<a class="anchor-link" href="#Limitaciones">¶</a></h3><ul>
-<li><strong>Calidad de los datos.</strong> En 2024 casi la mitad de las empresas aparece con deuda igual a cero, incluyendo emisores tan conocidos como Ford o General Motors, por lo que traté el cero como dato faltante. El modelo describe a empresas <em>que usan deuda</em> y no dice nada sobre por qué algunas no la usan. Sólo 30% de las empresas de 2024 llegó a la muestra final; si los datos faltantes no son aleatorios, puede haber sesgo de selección. También corregí 188 empresas con deuda duplicada (cuento la deuda una sola vez).</li>
-<li><strong>Asociación, no causalidad.</strong> Los coeficientes describen cómo difieren empresas con distintas características; no prueban que cambiar una característica cambie la deuda. La dirección puede ser inversa (una empresa muy endeudada puede valer menos en bolsa) o deberse a un tercer factor.</li>
-<li><strong>Un solo año.</strong> Un corte transversal no distingue diferencias permanentes entre empresas de situaciones pasajeras, y 2024 fue un año de tasas de interés altas.</li>
-<li><strong>Variables omitidas.</strong> No hay información de política de dividendos y recompras, calificación crediticia, tasa de impuestos, volatilidad de los flujos ni propiedad de la empresa. Las predicciones de Apple y Papa John's muestran que eso importa.</li>
-<li><strong>Empresas extremas.</strong> El modelo acota el apalancamiento en 100% y por diseño no describe a las empresas con capital contable negativo.</li>
-<li><strong>Deuda en libros.</strong> Se mide deuda bruta sobre activos contables; no considera el efectivo ni los valores de mercado.</li>
+<li><strong>Calidad y selección de los datos.</strong> En 2024 casi la mitad de las empresas aparece con deuda igual a cero (incluso Ford o General Motors), por lo que traté el cero como dato faltante. El modelo describe a empresas <em>que usan deuda</em>; sólo 30% de las empresas de 2024 llegó a la muestra final, y si los faltantes no son aleatorios puede haber sesgo de selección.</li>
+<li><strong>Asociación, no causalidad.</strong> Los coeficientes comparan empresas distintas; no prueban que cambiar una característica cambie la deuda (la dirección puede ser inversa o deberse a un tercer factor).</li>
+<li><strong>Un solo año.</strong> Un corte transversal no separa diferencias permanentes de situaciones pasajeras, y 2024 fue un año de tasas altas.</li>
+<li><strong>Variables omitidas y deuda en libros.</strong> No hay dividendos y recompras, calificación crediticia ni impuestos (Apple y Papa John's lo muestran), y la deuda se mide en libros, sin considerar efectivo ni valores de mercado.</li>
 </ul>
 <h3 id="Qu%C3%A9-har%C3%ADa-con-m%C3%A1s-tiempo-o-m%C3%A1s-datos">Qué haría con más tiempo o más datos<a class="anchor-link" href="#Qu%C3%A9-har%C3%ADa-con-m%C3%A1s-tiempo-o-m%C3%A1s-datos">¶</a></h3><ol>
-<li><strong>Conseguir datos de deuda y de activo fijo confiables</strong> (o usar varios años para validar los ceros) y modelar por separado la decisión de tener deuda y la de cuánta tener, por ejemplo con un modelo en dos partes.</li>
-<li><strong>Usar un panel de varios años</strong> con efectos fijos por empresa, para separar lo permanente de lo transitorio y acercarse a una interpretación causal.</li>
-<li><strong>Agregar variables</strong>: recompras y dividendos, calificación crediticia, volatilidad de utilidades, tasa efectiva de impuestos y el apalancamiento mediano de la industria a un nivel más fino (<code>naics2</code>).</li>
-<li><strong>Probar un modelo adecuado para proporciones</strong> (regresión fraccional) o una <strong>regresión cuantílica</strong>, que permita describir por separado a las empresas poco y muy apalancadas en lugar de sólo a la promedio.</li>
-<li><strong>Modelar aparte a las empresas con capital contable negativo</strong>, que siguen una lógica distinta.</li>
+<li><strong>Datos de deuda confiables y un modelo en dos partes:</strong> una para la decisión de tener deuda y otra para cuánta tener.</li>
+<li><strong>Panel de varios años</strong> con efectos fijos por empresa, para separar lo permanente de lo transitorio.</li>
+<li><strong>Más variables:</strong> recompras y dividendos, calificación crediticia, volatilidad de utilidades y tasa de impuestos.</li>
+<li><strong>Modelo para proporciones</strong> (regresión fraccional) o regresión cuantílica, que describa por separado a las empresas poco y muy apalancadas.</li>
 </ol>
 </div>
 </div>
