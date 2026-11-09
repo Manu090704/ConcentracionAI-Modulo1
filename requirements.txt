@@ -12,6 +12,10 @@ scipy==1.18.1
 statsmodels==0.15.0
 scikit-learn==1.9.0
 
+# Descarga de datos (bloque2, Workshop 4): Yahoo Finance y API del INEGI
+yfinance==1.8.0
+INEGIpy==2.0.0
+
 # Gráficas
 matplotlib==3.11.1
 seaborn==0.13.2
